@@ -113,20 +113,97 @@ function VenomDashboard() {
             </div>
           </header>
 
-          {/* Centerpiece Reveal Hero Band */}
-          <section aria-label="Interactive character portrait unmasking">
-            <RevealHero 
-              theme="venom" 
-              suitImage={suitImg} 
-              faceImage={faceImg} 
-              suitPosition="center center"
-              suitScale={1.0}
-              facePosition="center center"
-              faceScale={1.62}
-              faceTranslateX="-3.5%"
-              faceTranslateY="6.8%"
-              onReveal={handleRevealSound} 
-            />
+          {/* Two-Column Dossier Info Card & Reveal Hero */}
+          <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-4" aria-label="Venom profile and interactive unmasking card">
+            {/* Left Side: Creative Info & Quote Card */}
+            <div className="lg:col-span-7 flex flex-col justify-between bg-zinc-900/40 backdrop-blur-md border border-theme-primary/20 rounded-xl p-6 md:p-8 space-y-6 shadow-2xl relative overflow-hidden">
+              {/* High-tech scanner header */}
+              <div className="flex justify-between items-center border-b border-theme-primary/10 pb-4">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-primary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-primary"></span>
+                  </span>
+                  <span className="font-mono text-xs text-zinc-400 tracking-wider">
+                    DATABASE REGISTERED // SYMBIOSIS DIAGNOSTICS
+                  </span>
+                </div>
+                <span className="font-mono text-[9px] text-theme-glow uppercase tracking-widest">
+                  SYS STATUS: DANGER
+                </span>
+              </div>
+
+              {/* Bio Details */}
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold uppercase tracking-wider text-theme-primary font-display">
+                  SUBJECT ID: EDDIE BROCK // VENOM
+                </h3>
+                <p className="text-sm text-zinc-300 leading-relaxed font-body">
+                  An investigative journalist bonded with an alien symbiote, Eddie Brock operates as Venom, a lethal protector feeding on criminals and fighting off existential symbiote threats from the cosmic void.
+                </p>
+              </div>
+
+              {/* Film Quote */}
+              <blockquote className="border-l-2 border-theme-primary pl-4 py-1 my-3 italic text-zinc-400 font-body text-sm leading-relaxed relative">
+                <span className="text-3xl text-theme-primary/30 font-serif absolute -left-1 -top-3">“</span>
+                We are Venom. We do not eat people... unless they are bad. We protect the innocent. That is the deal.
+                <cite className="block not-italic text-[10px] text-zinc-500 font-mono mt-2 uppercase tracking-wider">
+                  — Venom (2018)
+                </cite>
+              </blockquote>
+
+              {/* Diagnostic Specifications */}
+              <div className="grid grid-cols-2 gap-4 border-t border-theme-primary/10 pt-6">
+                <div>
+                  <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
+                    SYMBIOSIS SYNC
+                  </span>
+                  <span className="text-xs font-mono font-bold text-zinc-200">
+                    SYNAPSE OVERLAP: 98%
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
+                    CORE WEAKNESSES
+                  </span>
+                  <span className="text-xs font-mono font-bold text-zinc-200">
+                    SONIC WAVES & FIRE
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
+                    MUSCLE AMPLIFIER
+                  </span>
+                  <span className="text-xs font-mono font-bold text-zinc-200">
+                    STRENGTH MULTIPLIER: +450%
+                  </span>
+                </div>
+                <div>
+                  <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
+                    THREAT RATING
+                  </span>
+                  <span className="text-xs font-mono font-bold text-zinc-200">
+                    CLASS-4 LETHAL ANTI-HERO
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side: Unmasking Portrait */}
+            <div className="lg:col-span-5 flex justify-center items-center">
+              <RevealHero 
+                theme="venom" 
+                suitImage={suitImg} 
+                faceImage={faceImg} 
+                suitPosition="center center"
+                suitScale={1.0}
+                facePosition="center center"
+                faceScale={1.62}
+                faceTranslateX="-3.5%"
+                faceTranslateY="6.8%"
+                onReveal={handleRevealSound} 
+              />
+            </div>
           </section>
 
           {/* Grid Area */}
