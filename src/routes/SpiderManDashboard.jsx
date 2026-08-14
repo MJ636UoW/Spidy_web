@@ -117,8 +117,10 @@ function SpiderManDashboard() {
               faceImage={faceImg} 
               suitPosition="center center"
               suitScale={1.0}
-              facePosition="48.5% 28%"
-              faceScale={1.22}
+              facePosition="center center"
+              faceScale={0.755}
+              faceTranslateX="-39.1%"
+              faceTranslateY="-34.8%"
               onReveal={handleRevealSound} 
             />
           </section>

@@ -125,7 +125,11 @@ function RevealHero({
   suitPosition = 'center center', 
   facePosition = 'center center',
   suitScale = 1,
-  faceScale = 1
+  faceScale = 1,
+  suitTranslateX = '0px',
+  suitTranslateY = '0px',
+  faceTranslateX = '0px',
+  faceTranslateY = '0px'
 }) {
   const containerRef = useRef(null);
   const suitRef = useRef(null);
@@ -301,7 +305,7 @@ function RevealHero({
             className="w-full h-full object-cover"
             style={{ 
               objectPosition: facePosition,
-              transform: `scale(${faceScale})`
+              transform: `translate(${faceTranslateX}, ${faceTranslateY}) scale(${faceScale})`
             }}
             draggable="false"
           />
@@ -333,7 +337,7 @@ function RevealHero({
             className="w-full h-full object-cover"
             style={{ 
               objectPosition: suitPosition,
-              transform: `scale(${suitScale})`
+              transform: `translate(${suitTranslateX}, ${suitTranslateY}) scale(${suitScale})`
             }}
             draggable="false"
           />
