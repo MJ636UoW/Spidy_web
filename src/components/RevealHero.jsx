@@ -208,7 +208,7 @@ function RevealHero({
 
     let animFrame;
     let driftTimer = setTimeout(() => {
-      r.set(130); 
+      r.set(180); // Bigger automatic reveal radius
       const startTime = Date.now();
 
       const tick = () => {
@@ -219,8 +219,9 @@ function RevealHero({
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const dx = Math.sin(elapsed * 1.0) * (rect.width * 0.18);
-        const dy = Math.sin(elapsed * 2.0) * (rect.height * 0.14);
+        // Circular/elliptical revolve sweeping the entire card boundary
+        const dx = Math.sin(elapsed * 0.85) * (rect.width * 0.42);
+        const dy = Math.cos(elapsed * 0.85) * (rect.height * 0.42);
 
         x.set(centerX + dx);
         y.set(centerY + dy);
@@ -228,7 +229,7 @@ function RevealHero({
         animFrame = requestAnimationFrame(tick);
       };
       tick();
-    }, 3000); 
+    }, 800); // Start revolving faster
 
     return () => {
       clearTimeout(driftTimer);
@@ -249,7 +250,7 @@ function RevealHero({
     const rect = containerRef.current.getBoundingClientRect();
     x.set(e.clientX - rect.left);
     y.set(e.clientY - rect.top);
-    r.set(150); 
+    r.set(220); // Larger cursor unmasking radius
   };
 
   const handlePointerLeave = () => {
@@ -269,7 +270,7 @@ function RevealHero({
     const touch = e.touches[0];
     x.set(touch.clientX - rect.left);
     y.set(touch.clientY - rect.top);
-    r.set(150);
+    r.set(220); // Larger touch unmasking radius
   };
 
   const handleTouchMove = (e) => {
