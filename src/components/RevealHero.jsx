@@ -12,17 +12,13 @@ function SpiderManSuitSVG() {
           <stop offset="100%" stopColor="#0B0B10" stopOpacity="0" />
         </radialGradient>
       </defs>
-      {/* Background and glows */}
       <rect width="1200" height="500" fill="#0B0B10" />
       <rect width="1200" height="500" fill="url(#sm-suit-glow)" />
       
-      {/* Suit main shape */}
       <path d="M400 500 C450 150, 750 150, 800 500" fill="#D6202A" />
-      {/* Blue side details */}
       <path d="M400 500 C430 350, 480 320, 500 500" fill="#1B3F8B" />
       <path d="M800 500 C770 350, 720 320, 700 500" fill="#1B3F8B" />
       
-      {/* Web grid lines */}
       <path d="M600 200 C600 300, 600 400, 600 500" stroke="#0B0B10" strokeWidth="3" />
       <path d="M500 500 C550 350, 650 350, 700 500" stroke="#0B0B10" strokeWidth="2.5" />
       <path d="M450 500 C520 280, 680 280, 750 500" stroke="#0B0B10" strokeWidth="2" />
@@ -34,11 +30,9 @@ function SpiderManSuitSVG() {
       <path d="M600 400 Q480 430, 410 440" stroke="#0B0B10" strokeWidth="2" />
       <path d="M600 400 Q720 430, 790 440" stroke="#0B0B10" strokeWidth="2" />
       
-      {/* Spiderman eyes */}
       <path d="M510 280 C480 260, 460 220, 520 205 C550 200, 570 240, 560 270 C550 285, 525 285, 510 280 Z" fill="#E7E9F0" stroke="#0B0B10" strokeWidth="12" strokeLinejoin="round" />
       <path d="M690 280 C720 260, 740 220, 680 205 C650 200, 630 240, 640 270 C650 285, 675 285, 690 280 Z" fill="#E7E9F0" stroke="#0B0B10" strokeWidth="12" strokeLinejoin="round" />
 
-      {/* Chest spider logo */}
       <path d="M600 400 Q600 440, 600 460 M600 415 Q590 425, 580 420 M600 415 Q610 425, 620 420 M600 430 Q585 445, 570 440 M600 430 Q615 445, 630 440" stroke="#0B0B10" strokeWidth="4" fill="none" />
       <circle cx="600" cy="415" r="7" fill="#0B0B10" />
       <circle cx="600" cy="428" r="11" fill="#0B0B10" />
@@ -57,15 +51,11 @@ function PeterParkerSVG() {
       </defs>
       <rect width="1200" height="500" fill="url(#pp-bg)" />
       
-      {/* Halftone comic circle grid (stylized) */}
       <circle cx="600" cy="250" r="180" fill="#6FA8FF" opacity="0.15" />
       <circle cx="600" cy="250" r="130" fill="#6FA8FF" opacity="0.25" />
       
-      {/* Portrait silhouette representing Peter Parker */}
       <path d="M420 500 C430 400, 480 350, 520 340 C530 310, 520 250, 530 220 C500 200, 490 140, 540 100 C590 60, 680 80, 680 140 C680 180, 660 210, 670 230 C690 260, 680 310, 680 340 C720 350, 770 400, 780 500 Z" fill="#E7E9F0" />
-      {/* Hair detail */}
       <path d="M530 160 C510 140, 520 100, 550 90 C590 75, 680 80, 670 130 C660 110, 620 110, 600 120 C580 110, 550 120, 530 160 Z" fill="#3E2723" />
-      {/* Glasses */}
       <rect x="555" y="165" width="40" height="30" rx="5" stroke="#3E2723" strokeWidth="4" fill="none" />
       <rect x="605" y="165" width="40" height="30" rx="5" stroke="#3E2723" strokeWidth="4" fill="none" />
       <line x1="595" y1="175" x2="605" y2="175" stroke="#3E2723" strokeWidth="4" />
@@ -85,19 +75,15 @@ function VenomSuitSVG() {
       <rect width="1200" height="500" fill="#050505" />
       <rect width="1200" height="500" fill="url(#vn-suit-glow)" />
 
-      {/* Symbiote body shape */}
       <path d="M350 500 C380 100, 820 100, 850 500 Z" fill="#161616" stroke="#000" strokeWidth="4" />
       
-      {/* Creepy organic white lines */}
       <path d="M600 180 Q610 250, 600 350" stroke="#EDEDED" strokeWidth="3" opacity="0.4" />
       <path d="M530 500 Q560 380, 580 320" stroke="#EDEDED" strokeWidth="2" opacity="0.3" />
       <path d="M670 500 Q640 380, 620 320" stroke="#EDEDED" strokeWidth="2" opacity="0.3" />
       
-      {/* Venom giant jagged white eyes */}
       <path d="M470 260 C420 220, 440 130, 530 160 C550 170, 550 200, 545 220 C540 240, 500 270, 470 260 Z" fill="#EDEDED" stroke="#000" strokeWidth="6" />
       <path d="M730 260 C780 220, 760 130, 670 160 C650 170, 650 200, 655 220 C660 240, 700 270, 730 260 Z" fill="#EDEDED" stroke="#000" strokeWidth="6" />
 
-      {/* Sharp fang mouth hint */}
       <path d="M520 280 Q600 310, 680 280 C670 330, 530 330, 520 280 Z" fill="#0F0F0F" stroke="#EDEDED" strokeWidth="2" />
       <path d="M530 285 L540 295 L550 287 L560 298 L570 290 L580 300 L590 292 L600 302 L610 292 L620 300 L630 290 L640 298 L650 287 L660 295 L670 285" fill="#EDEDED" />
     </svg>
@@ -115,16 +101,12 @@ function EddieBrockSVG() {
       </defs>
       <rect width="1200" height="500" fill="url(#eb-bg)" />
       
-      {/* Dark creepy veins texture behind him */}
       <path d="M300 100 Q450 250, 320 400" stroke="#7A0000" strokeWidth="2" opacity="0.3" />
       <path d="M900 100 Q750 250, 880 400" stroke="#7A0000" strokeWidth="2" opacity="0.3" />
 
-      {/* Gritty Eddie Brock portrait */}
       <path d="M420 500 C430 400, 480 350, 520 340 C530 310, 520 250, 530 220 C500 200, 490 140, 540 100 C590 60, 680 80, 680 140 C680 180, 660 210, 670 230 C690 260, 680 310, 680 340 C720 350, 770 400, 780 500 Z" fill="#7A7A7A" />
-      {/* Blonde hair */}
       <path d="M530 140 C520 90, 580 80, 600 70 C650 70, 680 100, 675 140 C650 115, 600 110, 570 120 Z" fill="#9E8E6A" />
 
-      {/* Symbiote veins creeping up Eddie's face/neck on one side */}
       <path d="M480 430 C490 400, 510 390, 530 380 C540 370, 542 340, 540 330 C538 310, 540 280, 550 260" stroke="#050505" strokeWidth="8" strokeLinecap="round" />
       <path d="M490 450 Q515 410, 550 400" stroke="#050505" strokeWidth="5" />
       <path d="M510 490 Q530 440, 560 430" stroke="#050505" strokeWidth="5" />
@@ -135,7 +117,7 @@ function EddieBrockSVG() {
 
 // --- Main RevealHero Component ---
 
-function RevealHero({ suitImage, faceImage, theme }) {
+function RevealHero({ suitImage, faceImage, theme, onReveal }) {
   const containerRef = useRef(null);
   const suitRef = useRef(null);
   
@@ -199,13 +181,13 @@ function RevealHero({ suitImage, faceImage, theme }) {
   // Idle drift pattern triggered after inactivity
   useEffect(() => {
     if (prefersReduced || isInteracting) {
-      if (!isInteracting) r.set(0); // Make sure it stays suited if user left and no drift
+      if (!isInteracting) r.set(0); 
       return;
     }
 
     let animFrame;
     let driftTimer = setTimeout(() => {
-      r.set(130); // Reveal a bit of face during idle drift
+      r.set(130); 
       const startTime = Date.now();
 
       const tick = () => {
@@ -216,7 +198,6 @@ function RevealHero({ suitImage, faceImage, theme }) {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        // Figure-8 Lissajous path
         const dx = Math.sin(elapsed * 1.0) * (rect.width * 0.18);
         const dy = Math.sin(elapsed * 2.0) * (rect.height * 0.14);
 
@@ -226,7 +207,7 @@ function RevealHero({ suitImage, faceImage, theme }) {
         animFrame = requestAnimationFrame(tick);
       };
       tick();
-    }, 3000); // 3 seconds of inactivity
+    }, 3000); 
 
     return () => {
       clearTimeout(driftTimer);
@@ -237,11 +218,17 @@ function RevealHero({ suitImage, faceImage, theme }) {
   // Event Handlers
   const handlePointerMove = (e) => {
     if (!containerRef.current) return;
+    
+    // Play sound if we were not already unmasking
+    if (!isInteracting && onReveal) {
+      onReveal();
+    }
+
     setIsInteracting(true);
     const rect = containerRef.current.getBoundingClientRect();
     x.set(e.clientX - rect.left);
     y.set(e.clientY - rect.top);
-    r.set(150); // Set reveal radius size
+    r.set(150); 
   };
 
   const handlePointerLeave = () => {
@@ -251,6 +238,11 @@ function RevealHero({ suitImage, faceImage, theme }) {
 
   const handleTouchStart = (e) => {
     if (!containerRef.current || e.touches.length === 0) return;
+    
+    if (onReveal) {
+      onReveal();
+    }
+
     setIsInteracting(true);
     const rect = containerRef.current.getBoundingClientRect();
     const touch = e.touches[0];
@@ -327,9 +319,9 @@ function RevealHero({ suitImage, faceImage, theme }) {
         )}
       </div>
       
-      {/* Instructions Overlay Overlay */}
+      {/* Instructions Overlay */}
       <div className="absolute bottom-4 left-4 z-25 bg-black/60 px-3 py-1.5 rounded border border-white/5 font-mono text-[9px] text-zinc-400 pointer-events-none uppercase tracking-widest">
-        {isMobile ? 'Drag to Unmask' : 'Hover to Unmask'}
+        {isInteracting ? 'Unmasked' : 'Hover / Touch to Unmask'}
       </div>
     </div>
   );

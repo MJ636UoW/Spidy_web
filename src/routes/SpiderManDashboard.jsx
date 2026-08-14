@@ -7,9 +7,11 @@ import PowerCard from '../components/PowerCard';
 import ClipModal from '../components/ClipModal';
 import CursorTrail from '../components/CursorTrail';
 import { spiderGadgets } from '../data/spiderGadgets';
+import { playThwip } from '../data/soundSynthesizer';
 
 function SpiderManDashboard() {
   const [activeItem, setActiveItem] = useState(null);
+  const [isAudioEnabled, setIsAudioEnabled] = useState(false);
   const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
@@ -19,6 +21,19 @@ function SpiderManDashboard() {
     mediaQuery.addEventListener('change', handler);
     return () => mediaQuery.removeEventListener('change', handler);
   }, []);
+
+  const handleCardClick = (gadget) => {
+    if (isAudioEnabled) {
+      playThwip();
+    }
+    setActiveItem(gadget);
+  };
+
+  const handleRevealSound = () => {
+    if (isAudioEnabled) {
+      playThwip();
+    }
+  };
 
   const gridVariants = prefersReduced ? {
     hidden: { opacity: 1 },
@@ -51,7 +66,7 @@ function SpiderManDashboard() {
         <div className="max-w-7xl mx-auto space-y-8">
           
           {/* Header */}
-          <header className="flex justify-between items-center border-b border-theme-primary/20 pb-4">
+          <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-theme-primary/20 pb-4 gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-display uppercase tracking-wider text-theme-primary">
                 Spider-Man
@@ -60,17 +75,41 @@ function SpiderManDashboard() {
                 WEB ARSENAL // SPEC SHEETS
               </p>
             </div>
-            <Link 
-              to="/" 
-              className="px-4 py-2 font-mono text-xs border border-theme-primary/30 hover:border-theme-primary hover:bg-theme-primary hover:text-theme-bg transition duration-200 uppercase tracking-widest font-bold z-30 cursor-pointer outline-hidden focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg"
-            >
-              Back
-            </Link>
+            
+            {/* Control Panel (Back, Audio, Direct Swap) */}
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Sound Synthesizer Toggle */}
+              <button
+                onClick={() => setIsAudioEnabled(prev => !prev)}
+                className={`px-3 py-2 font-mono text-xs border transition duration-200 uppercase tracking-widest font-bold cursor-pointer outline-hidden focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg
+                  ${isAudioEnabled ? 'bg-theme-primary/20 border-theme-primary text-theme-primary' : 'border-zinc-700 text-zinc-400 hover:text-white'}
+                `}
+                aria-label={isAudioEnabled ? "Mute synthesized audio" : "Unmute synthesized audio"}
+              >
+                {isAudioEnabled ? 'AUDIO: ON 🔊' : 'AUDIO: MUTED 🔇'}
+              </button>
+
+              {/* Direct theme-swap stretch link */}
+              <Link 
+                to="/venom" 
+                className="px-3 py-2 font-mono text-xs border border-zinc-150 hover:bg-zinc-150 hover:text-black text-zinc-100 transition duration-200 uppercase tracking-widest font-bold focus-visible:ring-2 focus-visible:ring-zinc-100 focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg"
+                style={{ fontFamily: "'Unbounded', sans-serif" }}
+              >
+                VENOM CORE →
+              </Link>
+
+              <Link 
+                to="/" 
+                className="px-3 py-2 font-mono text-xs border border-theme-primary/30 hover:border-theme-primary hover:bg-theme-primary hover:text-theme-bg transition duration-200 uppercase tracking-widest font-bold focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg"
+              >
+                Back
+              </Link>
+            </div>
           </header>
 
           {/* Centerpiece Reveal Hero Band */}
           <section aria-label="Interactive character portrait unmasking">
-            <RevealHero theme="spiderman" />
+            <RevealHero theme="spiderman" onReveal={handleRevealSound} />
           </section>
 
           {/* Grid Area */}
@@ -90,7 +129,7 @@ function SpiderManDashboard() {
                 <motion.div key={gadget.id} variants={cardVariants}>
                   <PowerCard 
                     item={gadget} 
-                    onClick={() => setActiveItem(gadget)}
+                    onClick={() => handleCardClick(gadget)}
                   />
                 </motion.div>
               ))}
