@@ -5,6 +5,7 @@ import Landing from './routes/Landing'
 import SpiderManDashboard from './routes/SpiderManDashboard'
 import VenomDashboard from './routes/VenomDashboard'
 import StyleGuide from './routes/StyleGuide'
+import AlignTool from './routes/AlignTool'
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function AnimatedRoutes() {
         <Route path="/spiderman" element={<SpiderManDashboard />} />
         <Route path="/venom" element={<VenomDashboard />} />
         <Route path="/style-guide" element={<StyleGuide />} />
+        <Route path="/align" element={<AlignTool />} />
       </Routes>
     </AnimatePresence>
   );
