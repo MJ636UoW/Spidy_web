@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import suitImg from '../assets/spiderman/suit.jpg';
-import faceImg from '../assets/spiderman/face.png';
+import faceImg from '../assets/spiderman/face.jpg';
 
 function AlignTool() {
   const [scale, setScale] = useState(0.755);

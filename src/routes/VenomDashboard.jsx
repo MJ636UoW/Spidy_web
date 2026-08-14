@@ -119,7 +119,7 @@ function VenomDashboard() {
               suitScale={1.0}
               facePosition="center center"
               faceScale={1.62}
-              faceTranslateX="-1.1%"
+              faceTranslateX="-3.5%"
               faceTranslateY="6.8%"
               onReveal={handleRevealSound} 
             />

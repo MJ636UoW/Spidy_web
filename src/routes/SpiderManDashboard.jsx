@@ -11,7 +11,7 @@ import { playThwip } from '../data/soundSynthesizer';
 
 // Import custom character assets
 import suitImg from '../assets/spiderman/suit.jpg';
-import faceImg from '../assets/spiderman/face.png';
+import faceImg from '../assets/spiderman/face.jpg';
 
 function SpiderManDashboard() {
   const [activeItem, setActiveItem] = useState(null);
@@ -118,9 +118,9 @@ function SpiderManDashboard() {
               suitPosition="center center"
               suitScale={1.0}
               facePosition="center center"
-              faceScale={0.755}
-              faceTranslateX="-39.1%"
-              faceTranslateY="-34.8%"
+              faceScale={1.40}
+              faceTranslateX="-0.2%"
+              faceTranslateY="5.4%"
               onReveal={handleRevealSound} 
             />
           </section>
