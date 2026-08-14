@@ -123,3 +123,177 @@ export function playHiss() {
     console.warn("Failed to play synthesized symbiote hiss:", error);
   }
 }
+
+// --- Background Ambient Soundtrack Synthesizer ---
+let ambientNodes = [];
+let ambientGainNode = null;
+let isAmbientMuted = true; // start muted by default to satisfy browser autoplay policies
+let currentTheme = null;
+
+export function getAmbientMute() {
+  return isAmbientMuted;
+}
+
+export function startAmbient(theme) {
+  try {
+    const ctx = getAudioContext();
+    
+    // If the theme is already playing, do nothing
+    if (currentTheme === theme) {
+      if (ctx.state === 'suspended') ctx.resume();
+      return;
+    }
+    
+    // Stop any existing ambient track
+    stopAmbient();
+    
+    currentTheme = theme;
+    const now = ctx.currentTime;
+    
+    // Create master ambient gain node if it doesn't exist
+    if (!ambientGainNode) {
+      ambientGainNode = ctx.createGain();
+      ambientGainNode.gain.setValueAtTime(isAmbientMuted ? 0 : 0.15, now);
+      ambientGainNode.connect(ctx.destination);
+    }
+    
+    if (theme === 'spiderman') {
+      // Spider-Man high-tech hero drone
+      const osc1 = ctx.createOscillator();
+      osc1.type = 'triangle';
+      osc1.frequency.setValueAtTime(130.81, now); // C3 node
+      
+      const osc2 = ctx.createOscillator();
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(196.00, now); // G3 node
+      
+      // Rhythmic radar beep (gadget diagnostic scan feeling)
+      const beep = ctx.createOscillator();
+      beep.type = 'sine';
+      beep.frequency.setValueAtTime(659.25, now); // E5 note
+      
+      const beepGain = ctx.createGain();
+      beepGain.gain.setValueAtTime(0.001, now);
+      
+      const lfo = ctx.createOscillator();
+      lfo.type = 'sine';
+      lfo.frequency.setValueAtTime(0.7, now); // pulse every ~1.4s
+      
+      const lfoGain = ctx.createGain();
+      lfoGain.gain.setValueAtTime(0.002, now); // depth
+      
+      // Filter for warmth
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(320, now);
+      
+      // Connections
+      osc1.connect(filter);
+      osc2.connect(filter);
+      filter.connect(ambientGainNode);
+      
+      lfo.connect(lfoGain);
+      lfoGain.connect(beepGain.gain);
+      beep.connect(beepGain);
+      beepGain.connect(ambientGainNode);
+      
+      // Start nodes
+      osc1.start(now);
+      osc2.start(now);
+      beep.start(now);
+      lfo.start(now);
+      
+      ambientNodes.push(osc1, osc2, beep, lfo, filter, beepGain, lfoGain);
+      
+    } else if (theme === 'venom') {
+      // Venom heavy breathing symbiote rumble
+      const osc1 = ctx.createOscillator();
+      osc1.type = 'sawtooth';
+      osc1.frequency.setValueAtTime(55.00, now); // A1
+      
+      const osc2 = ctx.createOscillator();
+      osc2.type = 'sawtooth';
+      osc2.frequency.setValueAtTime(56.20, now); // detuned by 1.2Hz to pulse
+      
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(100, now);
+      filter.Q.setValueAtTime(3.0, now);
+      
+      // LFO for breathing filter sweep
+      const lfo = ctx.createOscillator();
+      lfo.type = 'sine';
+      lfo.frequency.setValueAtTime(0.18, now); // slow breathing
+      
+      const lfoGain = ctx.createGain();
+      lfoGain.gain.setValueAtTime(25, now); // sweeps filter between 75Hz and 125Hz
+      
+      // Warm white noise hum for organic breathing texture
+      const noise = ctx.createBufferSource();
+      noise.buffer = createNoiseBuffer(ctx, 4.0);
+      noise.loop = true;
+      
+      const noiseFilter = ctx.createBiquadFilter();
+      noiseFilter.type = 'lowpass';
+      noiseFilter.frequency.setValueAtTime(70, now);
+      
+      const noiseGain = ctx.createGain();
+      noiseGain.gain.setValueAtTime(0.015, now);
+      
+      // Connections
+      osc1.connect(filter);
+      osc2.connect(filter);
+      lfo.connect(lfoGain);
+      lfoGain.connect(filter.frequency);
+      filter.connect(ambientGainNode);
+      
+      noise.connect(noiseFilter);
+      noiseFilter.connect(noiseGain);
+      noiseGain.connect(ambientGainNode);
+      
+      // Start nodes
+      osc1.start(now);
+      osc2.start(now);
+      lfo.start(now);
+      noise.start(now);
+      
+      ambientNodes.push(osc1, osc2, lfo, noise, filter, lfoGain, noiseFilter, noiseGain);
+    }
+  } catch (error) {
+    console.warn("Failed to start ambient audio:", error);
+  }
+}
+
+export function stopAmbient() {
+  try {
+    ambientNodes.forEach(node => {
+      try {
+        node.stop();
+      } catch (e) {}
+    });
+    ambientNodes = [];
+    currentTheme = null;
+  } catch (error) {
+    console.warn("Failed to stop ambient audio:", error);
+  }
+}
+
+export function setAmbientMute(isMuted) {
+  try {
+    isAmbientMuted = isMuted;
+    const ctx = getAudioContext();
+    const now = ctx.currentTime;
+    
+    if (ambientGainNode) {
+      // Ramp gain exponentially to prevent audio pops
+      ambientGainNode.gain.exponentialRampToValueAtTime(isMuted ? 0.0001 : 0.15, now + 0.15);
+      setTimeout(() => {
+        if (ambientGainNode) {
+          ambientGainNode.gain.setValueAtTime(isMuted ? 0 : 0.15, ctx.currentTime);
+        }
+      }, 160);
+    }
+  } catch (error) {
+    console.warn("Failed to set ambient mute state:", error);
+  }
+}

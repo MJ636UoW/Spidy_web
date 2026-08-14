@@ -7,7 +7,7 @@ import PowerCard from '../components/PowerCard';
 import ClipModal from '../components/ClipModal';
 import CursorTrail from '../components/CursorTrail';
 import { spiderGadgets } from '../data/spiderGadgets';
-import { playThwip } from '../data/soundSynthesizer';
+import { playThwip, getAmbientMute, setAmbientMute } from '../data/soundSynthesizer';
 
 // Import custom character assets
 import suitImg from '../assets/spiderman/suit.jpg';
@@ -15,7 +15,7 @@ import faceImg from '../assets/spiderman/face.jpg';
 
 function SpiderManDashboard() {
   const [activeItem, setActiveItem] = useState(null);
-  const [isAudioEnabled, setIsAudioEnabled] = useState(false);
+  const [isAudioEnabled, setIsAudioEnabled] = useState(!getAmbientMute());
   const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
@@ -83,7 +83,11 @@ function SpiderManDashboard() {
             {/* Control Panel (Back, Audio, Direct Swap) */}
             <div className="flex flex-wrap items-center gap-3">
               <button
-                onClick={() => setIsAudioEnabled(prev => !prev)}
+                onClick={() => {
+                  const nextVal = !isAudioEnabled;
+                  setIsAudioEnabled(nextVal);
+                  setAmbientMute(!nextVal);
+                }}
                 className={`px-3 py-2 font-mono text-xs border transition duration-200 uppercase tracking-widest font-bold cursor-pointer outline-hidden focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg
                   ${isAudioEnabled ? 'bg-theme-primary/20 border-theme-primary text-theme-primary' : 'border-zinc-700 text-zinc-400 hover:text-white'}
                 `}
