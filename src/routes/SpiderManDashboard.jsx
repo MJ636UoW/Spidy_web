@@ -9,6 +9,10 @@ import CursorTrail from '../components/CursorTrail';
 import { spiderGadgets } from '../data/spiderGadgets';
 import { playThwip } from '../data/soundSynthesizer';
 
+// Import custom character assets
+import suitImg from '../assets/spiderman/suit.jpg';
+import faceImg from '../assets/spiderman/face.jpg';
+
 function SpiderManDashboard() {
   const [activeItem, setActiveItem] = useState(null);
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
@@ -107,7 +111,12 @@ function SpiderManDashboard() {
 
           {/* Centerpiece Reveal Hero Band */}
           <section aria-label="Interactive character portrait unmasking">
-            <RevealHero theme="spiderman" onReveal={handleRevealSound} />
+            <RevealHero 
+              theme="spiderman" 
+              suitImage={suitImg} 
+              faceImage={faceImg} 
+              onReveal={handleRevealSound} 
+            />
           </section>
 
           {/* Grid Area */}

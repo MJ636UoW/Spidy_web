@@ -9,6 +9,10 @@ import CursorTrail from '../components/CursorTrail';
 import { venomPowers } from '../data/venomPowers';
 import { playHiss } from '../data/soundSynthesizer';
 
+// Import custom character assets
+import suitImg from '../assets/venom/suit.jpg';
+import faceImg from '../assets/venom/face.jpg';
+
 function VenomDashboard() {
   const [activeItem, setActiveItem] = useState(null);
   const [isAudioEnabled, setIsAudioEnabled] = useState(false);
@@ -107,7 +111,12 @@ function VenomDashboard() {
 
           {/* Centerpiece Reveal Hero Band */}
           <section aria-label="Interactive character portrait unmasking">
-            <RevealHero theme="venom" onReveal={handleRevealSound} />
+            <RevealHero 
+              theme="venom" 
+              suitImage={suitImg} 
+              faceImage={faceImg} 
+              onReveal={handleRevealSound} 
+            />
           </section>
 
           {/* Grid Area */}
