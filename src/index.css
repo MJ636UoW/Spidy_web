@@ -23,3 +23,19 @@ html, body {
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Custom, theme-aware scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--theme-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-glow);
+}
