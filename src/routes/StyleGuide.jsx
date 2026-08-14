@@ -45,7 +45,7 @@ function StyleGuide() {
             <div className="space-y-2">
               <span className="text-xs font-mono text-zinc-400 block">Display Font (Anton / Unbounded)</span>
               <p className="text-5xl md:text-7xl font-display uppercase break-all">
-                MANDAR JOSHI
+                SPIDER-MAN × VENOM
               </p>
             </div>
             <div className="space-y-4">

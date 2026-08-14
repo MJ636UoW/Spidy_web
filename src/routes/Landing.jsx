@@ -10,8 +10,8 @@ function Landing() {
     <PageWrapper theme={hoveredSide}>
       {/* Floating Center Badge introducing Mandar Joshi */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 pointer-events-none flex flex-col items-center text-center">
-        <h1 className="font-mono text-[10px] text-zinc-300 tracking-[0.4em] uppercase bg-black/75 px-4 py-1.5 rounded border border-white/10 backdrop-blur-md select-none shadow-2xl">
-          MANDAR JOSHI // SOFTWARE PORTFOLIO
+        <h1 className="font-mono text-[10px] text-zinc-300 tracking-[0.3em] uppercase bg-black/75 px-4 py-1.5 rounded border border-white/10 backdrop-blur-md select-none shadow-2xl">
+          Spider-Man × Venom // Dual Experience
         </h1>
       </div>
 

@@ -73,10 +73,10 @@ function VenomDashboard() {
           <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-theme-primary/20 pb-4 gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-display uppercase tracking-wider text-theme-primary">
-                Mandar Joshi
+                Venom
               </h1>
               <p className="font-mono text-[10px] text-zinc-400 tracking-widest uppercase">
-                CORE ENGINEERING STRENGTHS // SYSTEMS ANALYSES
+                Eddie Brock // Symbiote Stats & Threats
               </p>
             </div>
             
