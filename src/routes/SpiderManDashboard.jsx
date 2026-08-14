@@ -115,6 +115,8 @@ function SpiderManDashboard() {
               theme="spiderman" 
               suitImage={suitImg} 
               faceImage={faceImg} 
+              suitPosition="center 90%"
+              facePosition="center 30%"
               onReveal={handleRevealSound} 
             />
           </section>

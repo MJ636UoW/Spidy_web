@@ -115,6 +115,8 @@ function VenomDashboard() {
               theme="venom" 
               suitImage={suitImg} 
               faceImage={faceImg} 
+              suitPosition="center 10%"
+              facePosition="center 20%"
               onReveal={handleRevealSound} 
             />
           </section>
