@@ -70,7 +70,7 @@ function VenomDashboard() {
         <div className="max-w-7xl mx-auto space-y-8">
           
           {/* Header */}
-          <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-theme-primary/20 pb-4 gap-4">
+          <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/20 pb-4 gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-display uppercase tracking-wider text-theme-primary">
                 Venom
@@ -208,7 +208,7 @@ function VenomDashboard() {
 
           {/* Grid Area */}
           <main className="space-y-6">
-            <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-zinc-800 pb-2">
+            <h2 className="text-sm font-mono text-zinc-400 uppercase tracking-widest border-b border-white/15 pb-2">
               01 / Core Engineering Strengths Registry
             </h2>
             
@@ -223,6 +223,7 @@ function VenomDashboard() {
                 <motion.div key={power.id} variants={cardVariants}>
                   <PowerCard 
                     item={power} 
+                    theme="venom"
                     onClick={() => handleCardClick(power)}
                   />
                 </motion.div>

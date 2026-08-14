@@ -223,6 +223,7 @@ function SpiderManDashboard() {
                 <motion.div key={gadget.id} variants={cardVariants}>
                   <PowerCard 
                     item={gadget} 
+                    theme="spiderman"
                     onClick={() => handleCardClick(gadget)}
                   />
                 </motion.div>

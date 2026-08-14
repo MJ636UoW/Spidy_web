@@ -1,13 +1,14 @@
 import React from 'react';
 
-function PowerCard({ item, onClick }) {
+function PowerCard({ item, onClick, theme }) {
   // Select some thematic visual accents based on items
   const stats = item.stats || [];
+  const glossyClass = theme === 'venom' ? 'venom-glossy' : theme === 'spiderman' ? 'spiderman-glossy' : '';
 
   return (
     <button
       onClick={onClick}
-      className="group text-left w-full relative flex flex-col justify-between p-6 rounded-xl border border-theme-primary/10 bg-theme-secondary/[0.03] hover:bg-theme-secondary/[0.08] hover:border-theme-glow transition-all duration-300 ease-out outline-hidden cursor-pointer focus-visible:ring-2 focus-visible:ring-theme-glow focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg shadow-xl hover:shadow-2xl hover:shadow-theme-glow/10 hover:-translate-y-1.5"
+      className={`group text-left w-full relative flex flex-col justify-between p-6 rounded-xl ${glossyClass} hover:border-theme-glow transition-all duration-300 ease-out outline-hidden cursor-pointer focus-visible:ring-2 focus-visible:ring-theme-glow focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg hover:shadow-2xl hover:shadow-theme-glow/10 hover:-translate-y-1.5`}
     >
       {/* Decorative corners for the "spec-sheet" layout */}
       <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-theme-primary/30 group-hover:border-theme-glow transition-colors duration-300" />
