@@ -39,3 +39,26 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--theme-glow);
 }
+
+/* Premium Character Glassmorphic Panel Styles */
+.spiderman-glossy {
+  background: linear-gradient(135deg, rgba(229, 26, 36, 0.08) 0%, rgba(0, 102, 255, 0.04) 50%, rgba(5, 5, 11, 0.8) 100%);
+  border: 1px solid rgba(229, 26, 36, 0.28);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(0, 102, 255, 0.25),
+    0 0 20px rgba(229, 26, 36, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.venom-glossy {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(17, 17, 17, 0.02) 50%, rgba(0, 0, 0, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 0 20px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

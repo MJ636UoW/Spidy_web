@@ -118,7 +118,7 @@ function ClipModal({ item, onClose, theme }) {
                      dur="6s" repeatCount="indefinite" />
           </path>
           
-          <path d="M 500,340 C 450,250 350,280 300,170 C 250,60 120,100 100,0" stroke="#7A0000" strokeWidth="2" strokeOpacity="0.2" fill="none">
+          <path d="M 500,340 C 450,250 350,280 300,170 C 250,60 120,100 100,0" stroke="#FFFFFF" strokeWidth="2" strokeOpacity="0.25" fill="none">
             <animate attributeName="d" 
                      values="M 500,340 C 450,250 350,280 300,170 C 250,60 120,100 100,0;
                              M 480,340 C 460,260 320,290 320,170 C 320,50 110,90 120,0;
@@ -131,7 +131,7 @@ function ClipModal({ item, onClose, theme }) {
             <animate attributeName="r" values="30;45;30" dur="4s" repeatCount="indefinite" />
           </circle>
           
-          <circle cx="300" cy="170" r="10" fill="#7A0000" fillOpacity="0.4">
+          <circle cx="300" cy="170" r="10" fill="#FFFFFF" fillOpacity="0.35">
             <animate attributeName="r" values="10;22;10" dur="3s" repeatCount="indefinite" />
           </circle>
 
@@ -161,7 +161,7 @@ function ClipModal({ item, onClose, theme }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
-        className="relative w-full max-w-2xl bg-theme-bg border border-theme-primary/20 rounded-2xl overflow-hidden shadow-2xl z-10 select-none flex flex-col"
+        className={`relative w-full max-w-2xl ${theme === 'spiderman' ? 'spiderman-glossy' : 'venom-glossy'} rounded-2xl overflow-hidden shadow-2xl z-10 select-none flex flex-col`}
         initial={{ opacity: 0, scale: 0.93 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.93 }}

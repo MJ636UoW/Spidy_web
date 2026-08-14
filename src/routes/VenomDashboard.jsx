@@ -116,7 +116,7 @@ function VenomDashboard() {
           {/* Two-Column Dossier Info Card & Reveal Hero */}
           <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-4" aria-label="Venom profile and interactive unmasking card">
             {/* Left Side: Creative Info & Quote Card */}
-            <div className="lg:col-span-7 flex flex-col justify-between bg-zinc-900/40 backdrop-blur-md border border-theme-primary/20 rounded-xl p-6 md:p-8 space-y-6 shadow-2xl relative overflow-hidden">
+            <div className="lg:col-span-7 flex flex-col justify-between venom-glossy rounded-xl p-6 md:p-8 space-y-6 relative overflow-hidden">
               {/* High-tech scanner header */}
               <div className="flex justify-between items-center border-b border-theme-primary/10 pb-4">
                 <div className="flex items-center gap-2">

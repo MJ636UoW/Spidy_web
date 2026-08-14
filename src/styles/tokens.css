@@ -1,35 +1,35 @@
 :root {
   /* Default: Spider-Man Skin */
-  --theme-bg: #0B0B10;
-  --theme-primary: #D6202A;
-  --theme-secondary: #1B3F8B;
-  --theme-glow: #6FA8FF;
-  --theme-surface: #E7E9F0;
-  --theme-text: #E7E9F0;
+  --theme-bg: #05050B;
+  --theme-primary: #E51A24;
+  --theme-secondary: #0066FF;
+  --theme-glow: #0066FF;
+  --theme-surface: #0E0E18;
+  --theme-text: #F0F2FA;
   --theme-font-display: 'Anton', sans-serif;
   --theme-font-body: 'IBM Plex Sans', sans-serif;
   --theme-font-mono: 'IBM Plex Mono', monospace;
 }
 
 [data-theme="spiderman"] {
-  --theme-bg: #0B0B10;
-  --theme-primary: #D6202A;
-  --theme-secondary: #1B3F8B;
-  --theme-glow: #6FA8FF;
-  --theme-surface: #E7E9F0;
-  --theme-text: #E7E9F0;
+  --theme-bg: #05050B;
+  --theme-primary: #E51A24;
+  --theme-secondary: #0066FF;
+  --theme-glow: #0066FF;
+  --theme-surface: #0E0E18;
+  --theme-text: #F0F2FA;
   --theme-font-display: 'Anton', sans-serif;
   --theme-font-body: 'IBM Plex Sans', sans-serif;
   --theme-font-mono: 'IBM Plex Mono', monospace;
 }
 
 [data-theme="venom"] {
-  --theme-bg: #050505;
-  --theme-primary: #EDEDED;
-  --theme-secondary: #161616;
-  --theme-glow: #7A0000;
-  --theme-surface: #161616;
-  --theme-text: #EDEDED;
+  --theme-bg: #000000;
+  --theme-primary: #FFFFFF;
+  --theme-secondary: #111111;
+  --theme-glow: #FFFFFF;
+  --theme-surface: #111111;
+  --theme-text: #FFFFFF;
   --theme-font-display: 'Unbounded', sans-serif;
   --theme-font-body: 'IBM Plex Sans', sans-serif;
   --theme-font-mono: 'IBM Plex Mono', monospace;
