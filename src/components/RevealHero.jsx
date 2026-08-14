@@ -289,7 +289,7 @@ function RevealHero({
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className="reveal relative w-full h-[300px] md:h-[450px] overflow-hidden bg-black select-none border border-theme-primary/10 rounded-xl cursor-crosshair shadow-2xl"
+      className="reveal relative mx-auto w-full max-w-[320px] md:max-w-[380px] aspect-[576/1024] overflow-hidden bg-black select-none border border-theme-primary/10 rounded-xl cursor-crosshair shadow-2xl"
     >
       {/* Face Layer (Behind) */}
       <div className="absolute inset-0 w-full h-full">

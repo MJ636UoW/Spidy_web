@@ -115,10 +115,10 @@ function SpiderManDashboard() {
               theme="spiderman" 
               suitImage={suitImg} 
               faceImage={faceImg} 
-              suitPosition="50% 20%"
+              suitPosition="center center"
               suitScale={1.0}
-              facePosition="50.2% 16.5%"
-              faceScale={0.78}
+              facePosition="48.5% 28%"
+              faceScale={1.22}
               onReveal={handleRevealSound} 
             />
           </section>
