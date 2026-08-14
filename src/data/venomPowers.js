@@ -1,74 +1,74 @@
 export const venomPowers = [
   {
-    id: 'camouflage',
-    name: 'Camouflage',
-    tagline: 'Light-bending symbiote cell alignment',
-    description: 'Vanish from sight by blending the symbiote outer membrane with light reflections in the immediate environment. Allows Eddie Brock to execute silent takedowns and escape heated situations instantly.',
+    id: 'clean-code',
+    name: 'Clean Architecture',
+    tagline: 'Maintainable, self-documenting codebases',
+    description: 'Writing clean code following SOLID principles. Structuring folders logically, enforcing lint checkers, and implementing separation of concerns to avoid legacy spaghetti pipelines.',
     stats: [
-      { label: 'VISIBILITY', value: '0%' },
-      { label: 'ENERGY DRAIN', value: '1.2/s' },
-      { label: 'STEALTH MOD', value: 'MAX' }
+      { label: 'READABILITY', value: 'MAX' },
+      { label: 'TECHNICAL DEBT', value: '0%' },
+      { label: 'REVIEW SPEED', value: 'RAPID' }
     ],
-    videoPlaceholderText: '👤 CAMOUFLAGE_CLIP: INVISIBLE_MEMBRANE'
+    videoPlaceholderText: '👤 CLEAN_CODE: QUALITY_MEMBRANE'
   },
   {
-    id: 'tendril-strike',
-    name: 'Tendril Strike',
-    tagline: 'Multi-directional whipping lashes',
-    description: 'Shoots high-speed black symbiote tendrils outward to impale, whip, or drag enemies. Highly effective for crowd sweeps, closing gaps, and grabbing heavy environmental objects to throw.',
+    id: 'integrations-sync',
+    name: 'Integrations & Webhooks',
+    tagline: 'Real-time sync and multi-endpoint data pipes',
+    description: 'Connecting third-party services, scheduling background cron tasks, and setting up webhooks to sync databases and messaging services instantly.',
     stats: [
-      { label: 'RANGE', value: '15m' },
-      { label: 'STRIKES/SEC', value: '4.5' },
-      { label: 'PENETRATION', value: 'HIGH' }
+      { label: 'SYNC CHANNELS', value: 'MULTIPLE' },
+      { label: 'FAIL SAFE', value: 'RETRY_JOBS' },
+      { label: 'DELIVERY RATE', value: '100%' }
     ],
-    videoPlaceholderText: '🦑 TENDRIL_STRIKE_CLIP: OVERREACH_LASH'
+    videoPlaceholderText: '🦑 INTEGRATIONS: DATA_LASH_ACTIVE'
   },
   {
-    id: 'enhanced-strength',
-    name: 'Enhanced Strength',
-    tagline: 'Superhuman muscle fiber augmentation',
-    description: 'The symbiote reinforces the host\'s musculature, raising lifting capacity to multiple tons. Allows Venom to smash walls, hurl automobiles, and deliver devastating ground pounds that collapse concrete surfaces.',
+    id: 'db-scaling',
+    name: 'Database & Scaling',
+    tagline: 'Optimized schemas and load-bearing queries',
+    description: 'Modeling Postgres, MongoDB, and Redis setups. Writing optimized indices and transaction queries to maintain speed under heavy concurrent request bursts.',
     stats: [
-      { label: 'CARRY LIMIT', value: '25 TONS' },
-      { label: 'STRENGTH MULT', value: 'x10' },
-      { label: 'IMPACT RATING', value: 'DEVASTATING' }
+      { label: 'QUERY RESPONSE', value: '45ms' },
+      { label: 'MAX CONCURRENCY', value: '10k+' },
+      { label: 'REDUNDANCY', value: 'REPLICAS' }
     ],
-    videoPlaceholderText: '💪 ENHANCED_STRENGTH_CLIP: KINETIC_FORCE'
+    videoPlaceholderText: '💪 DB_SCALING: CORE_SCHEMAS'
   },
   {
-    id: 'regeneration',
-    name: 'Regeneration',
-    tagline: 'Accelerated host tissue reconstruction',
-    description: 'Forces active cellular regeneration in the host, instantly healing physical traumas, bones, and bullet wounds. Healing rate increases based on the amount of raw organic matter consumed.',
+    id: 'debugging-healing',
+    name: 'Debugging & Healing',
+    tagline: 'Root cause isolation and code refactoring',
+    description: 'Isolating runtime faults and memory leaks. Healing legacy systems, resolving build bugs, and rewriting outdated code structures cleanly.',
     stats: [
-      { label: 'HEAL RATE', value: '15%/s' },
-      { label: 'SYNC COST', value: '20%' },
-      { label: 'RECOVERY MOD', value: 'CELLULAR' }
+      { label: 'DEBUG RATE', value: 'CELLULAR' },
+      { label: 'RESOLVE TIME', value: 'MINIMAL' },
+      { label: 'STABILITY', value: 'STRENGTHENED' }
     ],
-    videoPlaceholderText: '🩸 REGENERATION_CLIP: ACCELERATED_MEND'
+    videoPlaceholderText: '🩸 DEBUGGING: RECONSTRUCT_CORE'
   },
   {
-    id: 'venom-bite',
-    name: 'Venom Bite',
-    tagline: 'Devastating close-range predator executioner',
-    description: 'A crushing bite maneuver utilizing the symbiote\'s razor fangs. Bites through titanium plates, absorbs neural energy from the target, and immediately restores health to Eddie Brock.',
+    id: 'problem-solving',
+    name: 'Problem Solving',
+    tagline: 'Analytical thinking and complex algorithm designs',
+    description: 'Resolving complex algorithmic bottlenecks, data conversions, and logic loops. Breaking down complex requirements into solid step-by-step algorithms.',
     stats: [
-      { label: 'DAMAGE RATING', value: 'FATAL' },
-      { label: 'HP REFUND', value: '40%' },
-      { label: 'FEED RATIO', value: 'OPTIMAL' }
+      { label: 'LOGIC RATING', value: 'OPTIMAL' },
+      { label: 'COMPLEXITY', value: 'O(log N)' },
+      { label: 'COMPLIANCE', value: 'WCAG_AA' }
     ],
-    videoPlaceholderText: '🦷 VENOM_BITE_CLIP: TARGET_CONSUMED'
+    videoPlaceholderText: '🦷 SOLVING: TARGETS_RESOLVED'
   },
   {
-    id: 'symbiote-roar',
-    name: 'Symbiote Roar',
-    tagline: 'Acoustic shockwave and mental disruption',
-    description: 'Unleashes a deep acoustic roar that creates a shockwave, disorienting target neural pathways. Paralyzes weak-willed enemies, shatters surrounding glass structures, and forces armor panels to tear off.',
+    id: 'collaboration-leadership',
+    name: 'Agile Teamwork',
+    tagline: 'Sprint delivery, review loops, and tech voice',
+    description: 'Leading code reviews, communicating technical concepts clearly, and collaborating with cross-functional teams to deliver sprints on time with premium quality.',
     stats: [
-      { label: 'DECIBELS', value: '145 dB' },
-      { label: 'RADIUS', value: '12m' },
-      { label: 'DISRUPT TIME', value: '4.0s' }
+      { label: 'COMMUNICATION', value: '145dB' },
+      { label: 'SPRINT RATE', value: '100%' },
+      { label: 'PAIR_DEV', value: 'COOPERATIVE' }
     ],
-    videoPlaceholderText: '🗣️ SYMBIOTE_ROAR_CLIP: NEURAL_SHOCK'
+    videoPlaceholderText: '🗣️ TEAMWORK: SHOCK_WAVE_DELIVERED'
   }
 ];

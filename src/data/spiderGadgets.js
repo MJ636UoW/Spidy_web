@@ -1,74 +1,74 @@
 export const spiderGadgets = [
   {
-    id: 'web-shooters',
-    name: 'Web Shooters',
-    tagline: 'Rapid-fire shear-thinning synthetic strands',
-    description: 'The core wrist-mounted web delivery system. Capable of firing rapid web strands to immobilize adversaries, bind structural objects, and facilitate high-speed pendulum swinging across city spaces.',
+    id: 'core-frontend',
+    name: 'React & Next.js',
+    tagline: 'High-speed virtual DOM and SSR components',
+    description: 'Expertise in building scalable, single-page and server-rendered web applications. Leveraging React hooks, server components, and dynamic routing to construct responsive interfaces.',
     stats: [
-      { label: 'AMMO CAPACITY', value: '100%' },
-      { label: 'RECHARGE TIME', value: '0.8s' },
-      { label: 'MAX RANGE', value: '45m' }
+      { label: 'ENGINE EFFICIENCY', value: '98%' },
+      { label: 'RENDER TIME', value: '1.2ms' },
+      { label: 'ARCHITECTURE', value: 'MODULAR' }
     ],
-    videoPlaceholderText: '🕸️ WEB_SHOOTER_CLIP: ACTIVE_STREAM'
+    videoPlaceholderText: '🕸️ CORE_FRONTEND: RENDER_FEED_ACTIVE'
   },
   {
-    id: 'impact-webbing',
-    name: 'Impact Webbing',
-    tagline: 'Concussive, high-impact web cocoons',
-    description: 'Fires high-velocity, dense web pellets that expand instantly upon target impact. Perfect for pinning stronger enemies to walls or immediately neutralizing armor defenses in crowded combat scenarios.',
+    id: 'styling-css',
+    name: 'Tailwind CSS',
+    tagline: 'Responsive design tokens and utilities',
+    description: 'Utility-first utility styling. Writing maintainable styling systems with design tokens, transitions, and theme configurations, conforming strictly to CSS standards.',
     stats: [
-      { label: 'COOLDOWN', value: '4.5s' },
-      { label: 'IMPACT FORCE', value: '880 N' },
-      { label: 'CHARGE RATIO', value: 'HIGH' }
+      { label: 'RESPONSIVENESS', value: 'FLAWLESS' },
+      { label: 'BUNDLE IMPACT', value: 'MINIMAL' },
+      { label: 'UTILITIES ACTIVE', value: '100%' }
     ],
-    videoPlaceholderText: '⚡ IMPACT_WEBBING_CLIP: CONDENSED_BURST'
+    videoPlaceholderText: '⚡ TAILWIND_STYLING: RENDERING_SYSTEM'
   },
   {
-    id: 'vibro-blast',
-    name: 'Vibro Blast',
-    tagline: 'Concussive acoustic resonance wave generator',
-    description: 'Emits a powerful concussive acoustic shockwave from the web-shooters. Staggers armored targets, shatters structural barriers, and creates wide-spread stagger windows to initiate close-combat counterattacks.',
+    id: 'ux-interactions',
+    name: 'Audio & Canvas',
+    tagline: 'Programmatic sound synthesis and particles',
+    description: 'Designing custom interactive elements like HTML5 Canvas animation loops, web-trails, and synthesizing sound effects programmatically with the Web Audio API.',
     stats: [
-      { label: 'POWER CONSUMPTION', value: '30%' },
-      { label: 'WAVE RADIUS', value: '8m' },
-      { label: 'STAGGER RATING', value: 'CRITICAL' }
+      { label: 'FPS RATE', value: '60 FPS' },
+      { label: 'latency', value: '0.00ms' },
+      { label: 'HARDWARE ACCEL', value: 'ACTIVE' }
     ],
-    videoPlaceholderText: '🔊 VIBRO_BLAST_CLIP: RESONANCE_WAVE'
+    videoPlaceholderText: '🔊 INTERACTIVE_UX: WEB_AUDIO_FLOW'
   },
   {
-    id: 'web-rush',
-    name: 'Web-Rush',
-    tagline: 'Bullet-time tactical focus system',
-    description: 'Synthesizes spider-sense responses to enter a heightened state of cognitive deceleration. Enables Spider-Man to plot trajectories, dodge incoming bullets, and perform pinpoint maneuvers in fractions of a second.',
+    id: 'state-js',
+    name: 'State & Motion',
+    tagline: 'Redux, Zustand, and spring-loaded animations',
+    description: 'Managing complex global application states and rendering motion curves using Framer Motion and GSAP. Animating layout changes and unmasking physics seamlessly.',
     stats: [
-      { label: 'SENSE RATIO', value: '250%' },
-      { label: 'DURATION', value: '3.0s' },
-      { label: 'TENSION RATIO', value: 'MINIMAL' }
+      { label: 'STATE SYNC', value: '100%' },
+      { label: 'SPRING DAMPING', value: 'WEIGHTED' },
+      { label: 'STUTTER RATING', value: '0%' }
     ],
-    videoPlaceholderText: '⏱️ WEB_RUSH_CLIP: FOCUS_STREAM'
+    videoPlaceholderText: '⏱️ STATE_MOTION: TIMELINE_STREAM'
   },
   {
-    id: 'chemical-web',
-    name: 'Chemical Web',
-    tagline: 'Cryogenic and thermal reactive cartridges',
-    description: 'Deploys specialized chemical cartridges containing cryogenic compounds or high-impact explosive mixtures. Freezes targets solid or inflicts area-of-effect damage to control large enemy squads.',
+    id: 'fullstack-api',
+    name: 'Node.js & Rest APIs',
+    tagline: 'Fast server runtimes and RESTful endpoints',
+    description: 'Connecting backend servers, designing RESTful APIs, securing routes, and writing serverless functions to process and fetch data securely.',
     stats: [
-      { label: 'ELEMENT', value: 'CRYOMIX' },
-      { label: 'FREEZE TIME', value: '5.0s' },
-      { label: 'PERK ACTIVE', value: 'CROWD_CTRL' }
+      { label: 'API UPTIME', value: '99.9%' },
+      { label: 'RESPONSE TIME', value: '180ms' },
+      { label: 'SECURITY', value: 'ENCRYPTED' }
     ],
-    videoPlaceholderText: '🧪 CHEMICAL_WEB_CLIP: ELEMENT_DISPERSION'
+    videoPlaceholderText: '🧪 BACKEND_API: ENDPOINT_DISPERSION'
   },
   {
-    id: 'suit-arsenal',
-    name: 'Suit Arsenal',
-    tagline: 'Nano-weave adaptive apparel modules',
-    description: 'A modular suit locker system that lets Spider-Man swap between protective suits (e.g. Classic, Electro-Proof, Iron Spider). Each suit changes style aesthetics and boosts defensive perks dynamically.',
+    id: 'project-wardrobe',
+    name: 'Project Locker',
+    tagline: 'Production-ready case studies and applications',
+    description: 'A portfolio of unlockable projects, ranging from custom interactive dashboards and portfolios to e-commerce engines, built with extreme focus on details.',
     stats: [
-      { label: 'ARMOR SHIELD', value: '+45%' },
-      { label: 'SUITS UNLOCKED', value: '12 / 12' },
-      { label: 'MATERIAL', style: 'NANO_WEAVE' }
+      { label: 'BUILDS COMPLETED', value: '15+' },
+      { label: 'TEST COVERAGE', value: '92%' },
+      { label: 'DELIVERY RATE', value: 'OPTIMAL' }
     ],
-    videoPlaceholderText: '🥋 SUIT_LOCKER_CLIP: ACTIVE_WARDROBE'
+    videoPlaceholderText: '🥋 PROJECT_WARDROBE: CASE_STUDIES'
   }
 ];

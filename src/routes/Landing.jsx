@@ -7,6 +7,13 @@ function Landing() {
 
   return (
     <PageWrapper theme={hoveredSide}>
+      {/* Floating Center Badge introducing Mandar Joshi */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 pointer-events-none flex flex-col items-center text-center">
+        <h1 className="font-mono text-[10px] text-zinc-500 tracking-[0.4em] uppercase bg-black/60 px-4 py-1.5 rounded border border-white/5 backdrop-blur-xs select-none">
+          MANDAR JOSHI // SOFTWARE PORTFOLIO
+        </h1>
+      </div>
+
       <div className="relative flex flex-col md:flex-row h-screen w-screen overflow-hidden bg-black font-body select-none">
         
         {/* Central vertical divider/seam */}
@@ -22,7 +29,7 @@ function Landing() {
           onMouseLeave={() => setHoveredSide(null)}
           onFocus={() => setHoveredSide('spiderman')}
           onBlur={() => setHoveredSide(null)}
-          aria-label="Enter Spider-Man Experience"
+          aria-label="Enter Spider-Man Experience (Frontend Tech Stack & Projects)"
         >
           {/* Subtle Red/Blue radial glow */}
           <div 
@@ -41,19 +48,19 @@ function Landing() {
           {/* Interactive Content */}
           <div className="relative z-10 flex flex-col items-center text-center space-y-4">
             <span className="font-mono text-xs text-[#6FA8FF] tracking-[0.3em] uppercase">
-              Peter Parker
+              PETER PARKER // FRONTEND ARCHITECT
             </span>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[#E7E9F0] tracking-wider uppercase transition-transform duration-300 group-hover:scale-105">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[#E7E9F0] tracking-wider uppercase transition-transform duration-300">
               Spider-Man
             </h2>
             <div className="h-[2px] w-12 bg-[#D6202A] transition-all duration-300" />
             <p className="font-mono text-[10px] text-zinc-400 tracking-widest uppercase">
-              Web Arsenal & Gadgets
+              Web Tech Stack & Projects
             </p>
           </div>
 
           {/* Focus indicator ring */}
-          <div className="absolute inset-4 border border-[#D6202A]/0 rounded-lg pointer-events-none transition-all duration-300 peer-focus:border-[#D6202A]/40 focus-within:border-[#D6202A]/30" />
+          <div className="absolute inset-4 border border-[#D6202A]/0 rounded-lg pointer-events-none transition-all duration-300 focus-within:border-[#D6202A]/30" />
         </Link>
 
         {/* Venom Half */}
@@ -66,7 +73,7 @@ function Landing() {
           onMouseLeave={() => setHoveredSide(null)}
           onFocus={() => setHoveredSide('venom')}
           onBlur={() => setHoveredSide(null)}
-          aria-label="Enter Venom Experience"
+          aria-label="Enter Venom Experience (Core Engineering Strengths & Traits)"
         >
           {/* Subtle White/Crimson radial glow */}
           <div 
@@ -85,17 +92,17 @@ function Landing() {
           {/* Interactive Content */}
           <div className="relative z-10 flex flex-col items-center text-center space-y-4">
             <span className="font-mono text-xs text-zinc-500 tracking-[0.3em] uppercase">
-              Eddie Brock
+              EDDIE BROCK // SYSTEMS ENGINEER
             </span>
             <h2 
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[#EDEDED] tracking-wider uppercase transition-transform duration-300 group-hover:scale-105"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display text-[#EDEDED] tracking-wider uppercase transition-transform duration-300"
               style={{ fontFamily: "'Unbounded', sans-serif", fontWeight: 800 }}
             >
               Venom
             </h2>
             <div className="h-[2px] w-12 bg-[#EDEDED] transition-all duration-300" />
             <p className="font-mono text-[10px] text-zinc-400 tracking-widest uppercase">
-              Symbiote Abilities
+              Core Engineering Strengths
             </p>
           </div>
 

@@ -69,16 +69,15 @@ function VenomDashboard() {
           <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-theme-primary/20 pb-4 gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-display uppercase tracking-wider text-theme-primary">
-                Venom
+                Mandar Joshi
               </h1>
               <p className="font-mono text-[10px] text-zinc-400 tracking-widest uppercase">
-                SYMBIOTE PROTOCOL // THREAT ANALYSIS
+                CORE ENGINEERING STRENGTHS // SYSTEMS ANALYSES
               </p>
             </div>
             
             {/* Control Panel (Back, Audio, Direct Swap) */}
             <div className="flex flex-wrap items-center gap-3">
-              {/* Sound Synthesizer Toggle */}
               <button
                 onClick={() => setIsAudioEnabled(prev => !prev)}
                 className={`px-3 py-2 font-mono text-xs border transition duration-200 uppercase tracking-widest font-bold cursor-pointer outline-hidden focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg
@@ -89,7 +88,6 @@ function VenomDashboard() {
                 {isAudioEnabled ? 'AUDIO: ON 🔊' : 'AUDIO: MUTED 🔇'}
               </button>
 
-              {/* Direct theme-swap stretch link */}
               <Link 
                 to="/spiderman" 
                 className="px-3 py-2 font-mono text-xs border border-red-600 hover:bg-red-600 hover:text-white text-[#D6202A] transition duration-200 uppercase tracking-widest font-bold focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg"
@@ -115,7 +113,7 @@ function VenomDashboard() {
           {/* Grid Area */}
           <main className="space-y-6">
             <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-zinc-800 pb-2">
-              01 / Symbiote Instincts Registry
+              01 / Core Engineering Strengths Registry
             </h2>
             
             <motion.div 

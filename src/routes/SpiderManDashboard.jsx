@@ -69,16 +69,15 @@ function SpiderManDashboard() {
           <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-theme-primary/20 pb-4 gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-display uppercase tracking-wider text-theme-primary">
-                Spider-Man
+                Mandar Joshi
               </h1>
               <p className="font-mono text-[10px] text-theme-glow tracking-widest uppercase">
-                WEB ARSENAL // SPEC SHEETS
+                FRONTEND TECH STACK // SPEC SHEETS
               </p>
             </div>
             
             {/* Control Panel (Back, Audio, Direct Swap) */}
             <div className="flex flex-wrap items-center gap-3">
-              {/* Sound Synthesizer Toggle */}
               <button
                 onClick={() => setIsAudioEnabled(prev => !prev)}
                 className={`px-3 py-2 font-mono text-xs border transition duration-200 uppercase tracking-widest font-bold cursor-pointer outline-hidden focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg
@@ -89,7 +88,6 @@ function SpiderManDashboard() {
                 {isAudioEnabled ? 'AUDIO: ON 🔊' : 'AUDIO: MUTED 🔇'}
               </button>
 
-              {/* Direct theme-swap stretch link */}
               <Link 
                 to="/venom" 
                 className="px-3 py-2 font-mono text-xs border border-zinc-150 hover:bg-zinc-150 hover:text-black text-zinc-100 transition duration-200 uppercase tracking-widest font-bold focus-visible:ring-2 focus-visible:ring-zinc-100 focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg"
@@ -115,7 +113,7 @@ function SpiderManDashboard() {
           {/* Grid Area */}
           <main className="space-y-6">
             <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-zinc-800 pb-2">
-              01 / Web Arsenal Inventory
+              01 / Frontend Competencies Overview
             </h2>
             
             <motion.div 
