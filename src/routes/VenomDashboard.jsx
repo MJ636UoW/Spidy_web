@@ -10,7 +10,7 @@ import { venomPowers } from '../data/venomPowers';
 import { playHiss } from '../data/soundSynthesizer';
 
 // Import custom character assets
-import suitImg from '../assets/landing_bg.jpg'; // Load split face image
+import suitImg from '../assets/venom/suit.jpg';
 import faceImg from '../assets/venom/face.jpg';
 
 function VenomDashboard() {
@@ -115,10 +115,12 @@ function VenomDashboard() {
               theme="venom" 
               suitImage={suitImg} 
               faceImage={faceImg} 
-              suitPosition="74% 28%"
-              suitScale={1.3}
-              facePosition="50% 20%"
-              faceScale={1.5}
+              suitPosition="center center"
+              suitScale={1.0}
+              facePosition="center center"
+              faceScale={1.62}
+              faceTranslateX="-1.1%"
+              faceTranslateY="6.8%"
               onReveal={handleRevealSound} 
             />
           </section>
