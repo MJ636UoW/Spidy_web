@@ -70,12 +70,12 @@ function VenomDashboard() {
         <div className="max-w-7xl mx-auto space-y-8">
           
           {/* Header */}
-          <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-white/20 pb-4 gap-4">
+          <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-black/15 pb-4 gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-display uppercase tracking-wider text-theme-primary">
                 Venom
               </h1>
-              <p className="font-mono text-[10px] text-zinc-400 tracking-widest uppercase">
+              <p className="font-mono text-[10px] text-zinc-600 tracking-widest uppercase">
                 Eddie Brock // Symbiote Stats & Threats
               </p>
             </div>
@@ -124,7 +124,7 @@ function VenomDashboard() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-primary opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-primary"></span>
                   </span>
-                  <span className="font-mono text-xs text-zinc-400 tracking-wider">
+                  <span className="font-mono text-xs text-zinc-600 tracking-wider">
                     DATABASE REGISTERED // SYMBIOSIS DIAGNOSTICS
                   </span>
                 </div>
@@ -138,13 +138,13 @@ function VenomDashboard() {
                 <h3 className="text-xl font-bold uppercase tracking-wider text-theme-primary font-display">
                   SUBJECT ID: EDDIE BROCK // VENOM
                 </h3>
-                <p className="text-sm text-zinc-300 leading-relaxed font-body">
+                <p className="text-sm text-zinc-700 leading-relaxed font-body">
                   An investigative journalist bonded with an alien symbiote, Eddie Brock operates as Venom, a lethal protector feeding on criminals and fighting off existential symbiote threats from the cosmic void.
                 </p>
               </div>
 
               {/* Film Quote */}
-              <blockquote className="border-l-2 border-theme-primary pl-4 py-1 my-3 italic text-zinc-400 font-body text-sm leading-relaxed relative">
+              <blockquote className="border-l-2 border-theme-primary pl-4 py-1 my-3 italic text-zinc-600 font-body text-sm leading-relaxed relative">
                 <span className="text-3xl text-theme-primary/30 font-serif absolute -left-1 -top-3">“</span>
                 We are Venom. We do not eat people... unless they are bad. We protect the innocent. That is the deal.
                 <cite className="block not-italic text-[10px] text-zinc-500 font-mono mt-2 uppercase tracking-wider">
@@ -158,7 +158,7 @@ function VenomDashboard() {
                   <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
                     SYMBIOSIS SYNC
                   </span>
-                  <span className="text-xs font-mono font-bold text-zinc-200">
+                  <span className="text-xs font-mono font-bold text-zinc-900">
                     SYNAPSE OVERLAP: 98%
                   </span>
                 </div>
@@ -166,7 +166,7 @@ function VenomDashboard() {
                   <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
                     CORE WEAKNESSES
                   </span>
-                  <span className="text-xs font-mono font-bold text-zinc-200">
+                  <span className="text-xs font-mono font-bold text-zinc-900">
                     SONIC WAVES & FIRE
                   </span>
                 </div>
@@ -174,7 +174,7 @@ function VenomDashboard() {
                   <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
                     MUSCLE AMPLIFIER
                   </span>
-                  <span className="text-xs font-mono font-bold text-zinc-200">
+                  <span className="text-xs font-mono font-bold text-zinc-900">
                     STRENGTH MULTIPLIER: +450%
                   </span>
                 </div>
@@ -182,7 +182,7 @@ function VenomDashboard() {
                   <span className="block text-[9px] font-mono text-zinc-500 uppercase tracking-wider">
                     THREAT RATING
                   </span>
-                  <span className="text-xs font-mono font-bold text-zinc-200">
+                  <span className="text-xs font-mono font-bold text-zinc-900">
                     CLASS-4 LETHAL ANTI-HERO
                   </span>
                 </div>
@@ -208,7 +208,7 @@ function VenomDashboard() {
 
           {/* Grid Area */}
           <main className="space-y-6">
-            <h2 className="text-sm font-mono text-zinc-400 uppercase tracking-widest border-b border-white/15 pb-2">
+            <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-black/10 pb-2">
               01 / Core Engineering Strengths Registry
             </h2>
             

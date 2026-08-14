@@ -26,7 +26,7 @@ function PowerCard({ item, onClick, theme }) {
             READY
           </span>
         </div>
-        <p className="text-xs font-body text-zinc-400 group-hover:text-zinc-300 transition-colors duration-300 leading-snug">
+        <p className={`text-xs font-body transition-colors duration-300 leading-snug ${theme === 'venom' ? 'text-zinc-600 group-hover:text-zinc-800' : 'text-zinc-400 group-hover:text-zinc-300'}`}>
           {item.tagline}
         </p>
       </div>
@@ -37,7 +37,7 @@ function PowerCard({ item, onClick, theme }) {
       {/* Specs layout using the IBM Plex Mono utility font */}
       <div className="space-y-1.5">
         {stats.map((stat, index) => (
-          <div key={index} className="flex justify-between items-center text-[10px] font-mono text-zinc-500 group-hover:text-zinc-400 transition-colors duration-300">
+          <div key={index} className={`flex justify-between items-center text-[10px] font-mono transition-colors duration-300 ${theme === 'venom' ? 'text-zinc-500 group-hover:text-zinc-700' : 'text-zinc-500 group-hover:text-zinc-400'}`}>
             <span className="uppercase tracking-wider">{stat.label}:</span>
             <span className="text-theme-glow font-semibold tracking-tight">{stat.value}</span>
           </div>

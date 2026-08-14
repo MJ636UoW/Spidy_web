@@ -294,7 +294,7 @@ function RevealHero({
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className={`reveal relative mx-auto w-full max-w-[320px] md:max-w-[380px] aspect-[576/1024] overflow-hidden bg-black select-none rounded-xl cursor-crosshair ${theme === 'venom' ? 'border border-white/30 shadow-[0_0_30px_rgba(255,255,255,0.1)]' : 'border border-theme-primary/25 shadow-[0_0_30px_rgba(229,26,36,0.15)]'}`}
+      className={`reveal relative mx-auto w-full max-w-[320px] md:max-w-[380px] aspect-[576/1024] overflow-hidden bg-black select-none rounded-xl cursor-crosshair ${theme === 'venom' ? 'border-2 border-black/30 shadow-[0_8px_30px_rgba(0,0,0,0.2)]' : 'border border-theme-primary/25 shadow-[0_0_30px_rgba(229,26,36,0.15)]'}`}
     >
       {/* Face Layer (Behind) */}
       <div className="absolute inset-0 w-full h-full">

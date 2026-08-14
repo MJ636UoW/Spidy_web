@@ -105,12 +105,12 @@ function ClipModal({ item, onClose, theme }) {
     } else {
       // Venom
       return (
-        <svg className="w-full h-full bg-[#050505]" viewBox="0 0 600 340">
-          {/* Dark Background */}
-          <rect width="600" height="340" fill="#030303" />
+        <svg className="w-full h-full bg-[#F5F5F5]" viewBox="0 0 600 340">
+          {/* Light Background */}
+          <rect width="600" height="340" fill="#F0F0F0" />
           
           {/* Symbiote breathing veins (organic lines animating) */}
-          <path d="M 100,340 C 150,250 250,280 300,170 C 350,60 480,100 500,0" stroke="#EDEDED" strokeWidth="2.5" strokeOpacity="0.15" fill="none">
+          <path d="M 100,340 C 150,250 250,280 300,170 C 350,60 480,100 500,0" stroke="#000000" strokeWidth="2.5" strokeOpacity="0.12" fill="none">
             <animate attributeName="d" 
                      values="M 100,340 C 150,250 250,280 300,170 C 350,60 480,100 500,0;
                              M 120,340 C 140,230 280,290 280,170 C 280,50 490,120 480,0;
@@ -118,7 +118,7 @@ function ClipModal({ item, onClose, theme }) {
                      dur="6s" repeatCount="indefinite" />
           </path>
           
-          <path d="M 500,340 C 450,250 350,280 300,170 C 250,60 120,100 100,0" stroke="#FFFFFF" strokeWidth="2" strokeOpacity="0.25" fill="none">
+          <path d="M 500,340 C 450,250 350,280 300,170 C 250,60 120,100 100,0" stroke="#000000" strokeWidth="2" strokeOpacity="0.18" fill="none">
             <animate attributeName="d" 
                      values="M 500,340 C 450,250 350,280 300,170 C 250,60 120,100 100,0;
                              M 480,340 C 460,260 320,290 320,170 C 320,50 110,90 120,0;
@@ -127,16 +127,16 @@ function ClipModal({ item, onClose, theme }) {
           </path>
 
           {/* Creepy pulsing blobs */}
-          <circle cx="300" cy="170" r="30" fill="#161616" fillOpacity="0.8">
+          <circle cx="300" cy="170" r="30" fill="#E0E0E0" fillOpacity="0.8">
             <animate attributeName="r" values="30;45;30" dur="4s" repeatCount="indefinite" />
           </circle>
           
-          <circle cx="300" cy="170" r="10" fill="#FFFFFF" fillOpacity="0.35">
+          <circle cx="300" cy="170" r="10" fill="#000000" fillOpacity="0.25">
             <animate attributeName="r" values="10;22;10" dur="3s" repeatCount="indefinite" />
           </circle>
 
           {/* Text labels */}
-          <text x="300" y="325" fill="#EDEDED" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="2">
+          <text x="300" y="325" fill="#1A1A1A" fontSize="10" fontFamily="monospace" textAnchor="middle" letterSpacing="2">
             {item.videoPlaceholderText}
           </text>
         </svg>
@@ -187,14 +187,14 @@ function ClipModal({ item, onClose, theme }) {
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="px-3 py-1.5 font-mono text-xs border border-zinc-700 hover:border-theme-primary text-zinc-400 hover:text-theme-primary transition duration-200 uppercase tracking-wider cursor-pointer font-bold focus-visible:ring-1 focus-visible:ring-theme-primary outline-hidden"
+              className={`px-3 py-1.5 font-mono text-xs border transition duration-200 uppercase tracking-wider cursor-pointer font-bold focus-visible:ring-1 focus-visible:ring-theme-primary outline-hidden ${theme === 'venom' ? 'border-zinc-300 hover:border-theme-primary text-zinc-600 hover:text-theme-primary' : 'border-zinc-700 hover:border-theme-primary text-zinc-400 hover:text-theme-primary'}`}
               aria-label="Close details"
             >
               CLOSE
             </button>
           </div>
 
-          <p className="text-sm font-body text-zinc-300 leading-relaxed">
+          <p className={`text-sm font-body leading-relaxed ${theme === 'venom' ? 'text-zinc-700' : 'text-zinc-300'}`}>
             {item.description}
           </p>
 

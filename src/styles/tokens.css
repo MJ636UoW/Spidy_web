@@ -24,12 +24,12 @@
 }
 
 [data-theme="venom"] {
-  --theme-bg: #000000;
-  --theme-primary: #FFFFFF;
-  --theme-secondary: #111111;
-  --theme-glow: #FFFFFF;
-  --theme-surface: #111111;
-  --theme-text: #FFFFFF;
+  --theme-bg: #F0F0F0;
+  --theme-primary: #000000;
+  --theme-secondary: #E8E8E8;
+  --theme-glow: #000000;
+  --theme-surface: #FFFFFF;
+  --theme-text: #0A0A0A;
   --theme-font-display: 'Unbounded', sans-serif;
   --theme-font-body: 'IBM Plex Sans', sans-serif;
   --theme-font-mono: 'IBM Plex Mono', monospace;
