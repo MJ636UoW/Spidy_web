@@ -117,7 +117,16 @@ function EddieBrockSVG() {
 
 // --- Main RevealHero Component ---
 
-function RevealHero({ suitImage, faceImage, theme, onReveal, suitPosition = 'center center', facePosition = 'center center' }) {
+function RevealHero({ 
+  suitImage, 
+  faceImage, 
+  theme, 
+  onReveal, 
+  suitPosition = 'center center', 
+  facePosition = 'center center',
+  suitScale = 1,
+  faceScale = 1
+}) {
   const containerRef = useRef(null);
   const suitRef = useRef(null);
   
@@ -290,7 +299,10 @@ function RevealHero({ suitImage, faceImage, theme, onReveal, suitPosition = 'cen
             onError={() => setHasFaceImg(false)}
             alt="Hero unmasked"
             className="w-full h-full object-cover"
-            style={{ objectPosition: facePosition }}
+            style={{ 
+              objectPosition: facePosition,
+              transform: `scale(${faceScale})`
+            }}
             draggable="false"
           />
         ) : theme === 'spiderman' ? (
@@ -319,7 +331,10 @@ function RevealHero({ suitImage, faceImage, theme, onReveal, suitPosition = 'cen
             onError={() => setHasSuitImg(false)}
             alt="Hero suited"
             className="w-full h-full object-cover"
-            style={{ objectPosition: suitPosition }}
+            style={{ 
+              objectPosition: suitPosition,
+              transform: `scale(${suitScale})`
+            }}
             draggable="false"
           />
         ) : theme === 'spiderman' ? (

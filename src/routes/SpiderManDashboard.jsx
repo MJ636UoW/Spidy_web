@@ -10,7 +10,7 @@ import { spiderGadgets } from '../data/spiderGadgets';
 import { playThwip } from '../data/soundSynthesizer';
 
 // Import custom character assets
-import suitImg from '../assets/spiderman/suit.jpg';
+import suitImg from '../assets/landing_bg.jpg'; // Load split face image
 import faceImg from '../assets/spiderman/face.jpg';
 
 function SpiderManDashboard() {
@@ -115,8 +115,10 @@ function SpiderManDashboard() {
               theme="spiderman" 
               suitImage={suitImg} 
               faceImage={faceImg} 
-              suitPosition="center 90%"
-              facePosition="center 30%"
+              suitPosition="26% 28%"
+              suitScale={1.3}
+              facePosition="45% 20%"
+              faceScale={1.85}
               onReveal={handleRevealSound} 
             />
           </section>
