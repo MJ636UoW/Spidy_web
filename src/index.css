@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Unbounded:wght@400;800;900&display=swap');
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@theme {
+  --font-display: var(--theme-font-display);
+  --font-body: var(--theme-font-body);
+  --font-mono: var(--theme-font-mono);
+  
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-primary: var(--theme-primary);
+  --color-theme-secondary: var(--theme-secondary);
+  --color-theme-glow: var(--theme-glow);
+  --color-theme-surface: var(--theme-surface);
+  --color-theme-text: var(--theme-text);
+}
+
+html, body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: var(--theme-font-body);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
