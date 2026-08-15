@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import PageWrapper from '../components/PageWrapper';
 import RevealHero from '../components/RevealHero';
 import PowerCard from '../components/PowerCard';
 import ClipModal from '../components/ClipModal';
 import CursorTrail from '../components/CursorTrail';
+import GitHubActivity from '../components/GitHubActivity';
+import CaseCard from '../components/CaseCard';
+import ThemeBleed from '../components/ThemeBleed';
 import { spiderGadgets } from '../data/spiderGadgets';
+import { caseFiles } from '../data/caseFiles';
+import { useEasterEgg } from '../hooks/useEasterEgg';
 import { playThwip, getAmbientMute, setAmbientMute } from '../data/soundSynthesizer';
 
 // Import custom character assets
@@ -17,6 +22,12 @@ function SpiderManDashboard() {
   const [activeItem, setActiveItem] = useState(null);
   const [isAudioEnabled, setIsAudioEnabled] = useState(!getAmbientMute());
   const [prefersReduced, setPrefersReduced] = useState(false);
+  const navigate = useNavigate();
+
+  // Easter egg: typing "venom" triggers takeover
+  useEasterEgg('venom', () => {
+    navigate('/venom');
+  });
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -80,7 +91,7 @@ function SpiderManDashboard() {
               </p>
             </div>
             
-            {/* Control Panel (Back, Audio, Direct Swap) */}
+            {/* Control Panel */}
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={() => {
@@ -96,13 +107,7 @@ function SpiderManDashboard() {
                 {isAudioEnabled ? 'AUDIO: ON 🔊' : 'AUDIO: MUTED 🔇'}
               </button>
 
-              <Link 
-                to="/venom" 
-                className="px-3 py-2 font-mono text-xs border border-zinc-150 hover:bg-zinc-150 hover:text-black text-zinc-100 transition duration-200 uppercase tracking-widest font-bold focus-visible:ring-2 focus-visible:ring-zinc-100 focus-visible:ring-offset-2 focus-visible:ring-offset-theme-bg"
-                style={{ fontFamily: "'Unbounded', sans-serif" }}
-              >
-                VENOM CORE →
-              </Link>
+              <ThemeBleed currentTheme="spiderman" />
 
               <Link 
                 to="/" 
@@ -145,7 +150,7 @@ function SpiderManDashboard() {
 
               {/* Film Quote */}
               <blockquote className="border-l-2 border-theme-primary pl-4 py-1 my-3 italic text-zinc-400 font-body text-sm leading-relaxed relative">
-                <span className="text-3xl text-theme-primary/30 font-serif absolute -left-1 -top-3">“</span>
+                <span className="text-3xl text-theme-primary/30 font-serif absolute -left-1 -top-3">"</span>
                 Every day I wake up knowing that no matter how many lives I protect, no matter how many people I try to save... my greatest fight will be in the head. And that is what makes me Spider-Man.
                 <cite className="block not-italic text-[10px] text-zinc-500 font-mono mt-2 uppercase tracking-wider">
                   — The Amazing Spider-Man 2 (2014)
@@ -206,7 +211,7 @@ function SpiderManDashboard() {
             </div>
           </section>
 
-          {/* Grid Area */}
+          {/* Card Grid */}
           <main className="space-y-6">
             <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-zinc-800 pb-2">
               01 / Web Arsenal
@@ -230,6 +235,21 @@ function SpiderManDashboard() {
               ))}
             </motion.div>
           </main>
+
+          {/* GitHub Activity Panel */}
+          <GitHubActivity theme="spiderman" username="divyashrma18" />
+
+          {/* Case Files Section */}
+          <section className="space-y-6">
+            <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-zinc-800 pb-2">
+              03 / Case Files
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {caseFiles.map((cf) => (
+                <CaseCard key={cf.id} caseFile={cf} theme="spiderman" />
+              ))}
+            </div>
+          </section>
 
           {/* Detail Tactical Modal */}
           <AnimatePresence>
