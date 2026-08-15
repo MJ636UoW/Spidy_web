@@ -209,7 +209,7 @@ function SpiderManDashboard() {
           {/* Grid Area */}
           <main className="space-y-6">
             <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-zinc-800 pb-2">
-              01 / Frontend Competencies Overview
+              01 / Web Arsenal
             </h2>
             
             <motion.div 

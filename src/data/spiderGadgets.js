@@ -1,74 +1,74 @@
 export const spiderGadgets = [
   {
-    id: 'core-frontend',
-    name: 'React & Next.js',
-    tagline: 'High-speed virtual DOM and SSR components',
-    description: 'Expertise in building scalable, single-page and server-rendered web applications. Leveraging React hooks, server components, and dynamic routing to construct responsive interfaces.',
+    id: 'web-shooters',
+    name: 'Web-Shooters',
+    tagline: 'Self-built gear, fires exactly what\'s needed, holds under load.',
+    description: 'Core stack mastery in React and Next.js — building scalable, component-driven interfaces with server-side rendering, dynamic routing, and modular architecture that holds under any production load.',
     stats: [
-      { label: 'ENGINE EFFICIENCY', value: '98%' },
-      { label: 'RENDER TIME', value: '1.2ms' },
-      { label: 'ARCHITECTURE', value: 'MODULAR' }
+      { label: 'RENDER', value: '1.2ms' },
+      { label: 'ARCHITECTURE', value: 'MODULAR' },
+      { label: 'ENGINE', value: 'REACT/NEXT' }
     ],
-    videoPlaceholderText: '🕸️ CORE_FRONTEND: RENDER_FEED_ACTIVE'
+    videoPlaceholderText: '🕸️ WEB_SHOOTERS: CORE_STACK_ACTIVE'
   },
   {
-    id: 'styling-css',
-    name: 'Tailwind CSS',
-    tagline: 'Responsive design tokens and utilities',
-    description: 'Utility-first utility styling. Writing maintainable styling systems with design tokens, transitions, and theme configurations, conforming strictly to CSS standards.',
+    id: 'spider-sense',
+    name: 'Spider-Sense',
+    tagline: 'Flags the problem before it ever reaches production.',
+    description: 'Debugging and QA instinct honed through relentless testing cycles. Catching edge cases, race conditions, and regressions before they ever touch a user — zero false positives, instant reflex.',
     stats: [
-      { label: 'RESPONSIVENESS', value: 'FLAWLESS' },
-      { label: 'BUNDLE IMPACT', value: 'MINIMAL' },
-      { label: 'UTILITIES ACTIVE', value: '100%' }
+      { label: 'DETECTION', value: 'PRE-PROD' },
+      { label: 'REFLEX', value: 'INSTANT' },
+      { label: 'FALSE POSITIVES', value: '0%' }
     ],
-    videoPlaceholderText: '⚡ TAILWIND_STYLING: RENDERING_SYSTEM'
+    videoPlaceholderText: '⚡ SPIDER_SENSE: THREAT_DETECTION'
   },
   {
-    id: 'ux-interactions',
-    name: 'Audio & Canvas',
-    tagline: 'Programmatic sound synthesis and particles',
-    description: 'Designing custom interactive elements like HTML5 Canvas animation loops, web-trails, and synthesizing sound effects programmatically with the Web Audio API.',
+    id: 'wall-crawl',
+    name: 'Wall-Crawl',
+    tagline: 'Sticks to any surface — phone, tablet, ultrawide.',
+    description: 'Responsive and cross-device design that grips every viewport. Fluid layouts, logical breakpoints, and pixel-perfect rendering from 375px mobile to ultrawide displays — nothing falls off the wall.',
     stats: [
-      { label: 'FPS RATE', value: '60 FPS' },
-      { label: 'latency', value: '0.00ms' },
-      { label: 'HARDWARE ACCEL', value: 'ACTIVE' }
+      { label: 'BREAKPOINTS', value: 'ALL' },
+      { label: 'GRIP', value: '100%' },
+      { label: 'LAYOUT', value: 'FLUID' }
     ],
-    videoPlaceholderText: '🔊 INTERACTIVE_UX: WEB_AUDIO_FLOW'
+    videoPlaceholderText: '🧱 WALL_CRAWL: RESPONSIVE_GRIP'
   },
   {
-    id: 'state-js',
-    name: 'State & Motion',
-    tagline: 'Redux, Zustand, and spring-loaded animations',
-    description: 'Managing complex global application states and rendering motion curves using Framer Motion and GSAP. Animating layout changes and unmasking physics seamlessly.',
+    id: 'web-rush',
+    name: 'Web-Rush',
+    tagline: 'Slows the moment down so every transition lands clean.',
+    description: 'Animation and motion expertise with Framer Motion and GSAP. Crafting weighted springs, staggered reveals, and page transitions that feel deliberate and cinematic — 60fps, zero jank, every frame intentional.',
     stats: [
-      { label: 'STATE SYNC', value: '100%' },
-      { label: 'SPRING DAMPING', value: 'WEIGHTED' },
-      { label: 'STUTTER RATING', value: '0%' }
+      { label: 'FPS', value: '60' },
+      { label: 'SPRING', value: 'WEIGHTED' },
+      { label: 'JANK', value: '0%' }
     ],
-    videoPlaceholderText: '⏱️ STATE_MOTION: TIMELINE_STREAM'
+    videoPlaceholderText: '⏱️ WEB_RUSH: MOTION_TIMELINE'
   },
   {
-    id: 'fullstack-api',
-    name: 'Node.js & Rest APIs',
-    tagline: 'Fast server runtimes and RESTful endpoints',
-    description: 'Connecting backend servers, designing RESTful APIs, securing routes, and writing serverless functions to process and fetch data securely.',
+    id: 'impact-webbing',
+    name: 'Impact Webbing',
+    tagline: 'Cuts load weight on contact.',
+    description: 'Performance optimization that strips every unnecessary byte. Code splitting, lazy loading, tree shaking, and image optimization — delivering minimal bundles with sub-second LCP and Lighthouse scores above 95.',
     stats: [
-      { label: 'API UPTIME', value: '99.9%' },
-      { label: 'RESPONSE TIME', value: '180ms' },
-      { label: 'SECURITY', value: 'ENCRYPTED' }
+      { label: 'BUNDLE', value: 'MINIMAL' },
+      { label: 'LCP', value: '<1s' },
+      { label: 'LIGHTHOUSE', value: '95+' }
     ],
-    videoPlaceholderText: '🧪 BACKEND_API: ENDPOINT_DISPERSION'
+    videoPlaceholderText: '💥 IMPACT_WEBBING: PERF_OPTIMIZED'
   },
   {
-    id: 'project-wardrobe',
-    name: 'Project Locker',
-    tagline: 'Production-ready case studies and applications',
-    description: 'A portfolio of unlockable projects, ranging from custom interactive dashboards and portfolios to e-commerce engines, built with extreme focus on details.',
+    id: 'daily-bugle-files',
+    name: 'Daily Bugle Files',
+    tagline: 'The story behind every shot — how it actually got built.',
+    description: 'Case studies and documentation that tell the full engineering story. Architecture decisions, trade-offs, performance wins, and lessons learned — filed publicly so the work speaks for itself.',
     stats: [
-      { label: 'BUILDS COMPLETED', value: '15+' },
-      { label: 'TEST COVERAGE', value: '92%' },
-      { label: 'DELIVERY RATE', value: 'OPTIMAL' }
+      { label: 'CASES FILED', value: '15+' },
+      { label: 'ARCHIVE', value: 'PUBLIC' },
+      { label: 'BYLINE', value: 'VERIFIED' }
     ],
-    videoPlaceholderText: '🥋 PROJECT_WARDROBE: CASE_STUDIES'
+    videoPlaceholderText: '📰 BUGLE_FILES: CASE_ARCHIVE'
   }
 ];

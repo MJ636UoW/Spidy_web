@@ -209,7 +209,7 @@ function VenomDashboard() {
           {/* Grid Area */}
           <main className="space-y-6">
             <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest border-b border-black/10 pb-2">
-              01 / Core Engineering Strengths Registry
+              01 / Symbiote Abilities
             </h2>
             
             <motion.div 

@@ -1,74 +1,74 @@
 export const venomPowers = [
   {
-    id: 'clean-code',
-    name: 'Clean Architecture',
-    tagline: 'Maintainable, self-documenting codebases',
-    description: 'Writing clean code following SOLID principles. Structuring folders logically, enforcing lint checkers, and implementing separation of concerns to avoid legacy spaghetti pipelines.',
+    id: 'symbiote-bond',
+    name: 'Symbiote Bond',
+    tagline: 'Fuses with any host system, syncs in real time.',
+    description: 'Integrations, APIs, and webhooks that bond seamlessly with any external service. Multi-endpoint synchronization with retry logic and fail-safe delivery — every payload lands, every connection holds.',
     stats: [
-      { label: 'READABILITY', value: 'MAX' },
-      { label: 'TECHNICAL DEBT', value: '0%' },
-      { label: 'REVIEW SPEED', value: 'RAPID' }
+      { label: 'SYNC', value: 'MULTI-ENDPOINT' },
+      { label: 'FAIL-SAFE', value: 'RETRY' },
+      { label: 'DELIVERY', value: '100%' }
     ],
-    videoPlaceholderText: '👤 CLEAN_CODE: QUALITY_MEMBRANE'
+    videoPlaceholderText: '🦑 SYMBIOTE_BOND: SYNC_ACTIVE'
   },
   {
-    id: 'integrations-sync',
-    name: 'Integrations & Webhooks',
-    tagline: 'Real-time sync and multi-endpoint data pipes',
-    description: 'Connecting third-party services, scheduling background cron tasks, and setting up webhooks to sync databases and messaging services instantly.',
+    id: 'regeneration',
+    name: 'Regeneration',
+    tagline: 'Breaks, heals, redeploys — without waiting for a human.',
+    description: 'Error handling and self-healing systems that recover automatically. Circuit breakers, graceful degradation, and auto-recovery pipelines that keep uptime at 99.9% without manual intervention.',
     stats: [
-      { label: 'SYNC CHANNELS', value: 'MULTIPLE' },
-      { label: 'FAIL SAFE', value: 'RETRY_JOBS' },
-      { label: 'DELIVERY RATE', value: '100%' }
+      { label: 'RESOLVE', value: 'MINIMAL' },
+      { label: 'UPTIME', value: '99.9%' },
+      { label: 'AUTO-RECOVER', value: 'ON' }
     ],
-    videoPlaceholderText: '🦑 INTEGRATIONS: DATA_LASH_ACTIVE'
+    videoPlaceholderText: '🩸 REGENERATION: SELF_HEAL_ACTIVE'
   },
   {
-    id: 'db-scaling',
-    name: 'Database & Scaling',
-    tagline: 'Optimized schemas and load-bearing queries',
-    description: 'Modeling Postgres, MongoDB, and Redis setups. Writing optimized indices and transaction queries to maintain speed under heavy concurrent request bursts.',
+    id: 'shape-shift',
+    name: 'Shape-Shift',
+    tagline: 'Reshapes itself to whatever the data demands.',
+    description: 'Adaptive architecture and schema design that evolves without breaking. Zero-downtime migrations, seamless refactors, and flexible data models that morph to fit any requirement shift.',
     stats: [
-      { label: 'QUERY RESPONSE', value: '45ms' },
-      { label: 'MAX CONCURRENCY', value: '10k+' },
+      { label: 'SCHEMA', value: 'ADAPTIVE' },
+      { label: 'MIGRATIONS', value: 'ZERO-DOWNTIME' },
+      { label: 'REFACTOR', value: 'SEAMLESS' }
+    ],
+    videoPlaceholderText: '🔄 SHAPE_SHIFT: SCHEMA_MORPH'
+  },
+  {
+    id: 'raw-strength',
+    name: 'Raw Strength',
+    tagline: 'Takes the hit, keeps serving.',
+    description: 'Scaling, concurrency, and load handling that absorbs any traffic spike. Optimized queries, replica-backed redundancy, and 10k+ concurrent connection capacity — raw infrastructure muscle.',
+    stats: [
+      { label: 'QUERY', value: '45ms' },
+      { label: 'CONCURRENCY', value: '10k+' },
       { label: 'REDUNDANCY', value: 'REPLICAS' }
     ],
-    videoPlaceholderText: '💪 DB_SCALING: CORE_SCHEMAS'
+    videoPlaceholderText: '💪 RAW_STRENGTH: LOAD_CAPACITY'
   },
   {
-    id: 'debugging-healing',
-    name: 'Debugging & Healing',
-    tagline: 'Root cause isolation and code refactoring',
-    description: 'Isolating runtime faults and memory leaks. Healing legacy systems, resolving build bugs, and rewriting outdated code structures cleanly.',
+    id: 'the-other-voice',
+    name: 'The Other Voice',
+    tagline: 'Two voices, one codebase, always in sync.',
+    description: 'Code review and pair programming as a collaborative force. Active review loops, constructive feedback, and cooperative development where every line gets a second set of eyes — two minds, one clean output.',
     stats: [
-      { label: 'DEBUG RATE', value: 'CELLULAR' },
-      { label: 'RESOLVE TIME', value: 'MINIMAL' },
-      { label: 'STABILITY', value: 'STRENGTHENED' }
+      { label: 'REVIEW LOOP', value: 'ACTIVE' },
+      { label: 'PAIR-DEV', value: 'COOPERATIVE' },
+      { label: 'SIGNAL', value: 'CLEAR' }
     ],
-    videoPlaceholderText: '🩸 DEBUGGING: RECONSTRUCT_CORE'
+    videoPlaceholderText: '🗣️ OTHER_VOICE: REVIEW_LOOP'
   },
   {
-    id: 'problem-solving',
-    name: 'Problem Solving',
-    tagline: 'Analytical thinking and complex algorithm designs',
-    description: 'Resolving complex algorithmic bottlenecks, data conversions, and logic loops. Breaking down complex requirements into solid step-by-step algorithms.',
+    id: 'camouflage',
+    name: 'Camouflage',
+    tagline: 'Invisible until it needs to strike.',
+    description: 'Security, authentication, and data protection that stays hidden until activated. Encrypted auth flows, minimal exposure surfaces, and OWASP-compliant defenses — silent, invisible, lethal when tested.',
     stats: [
-      { label: 'LOGIC RATING', value: 'OPTIMAL' },
-      { label: 'COMPLEXITY', value: 'O(log N)' },
-      { label: 'COMPLIANCE', value: 'WCAG_AA' }
+      { label: 'AUTH', value: 'ENCRYPTED' },
+      { label: 'EXPOSURE', value: 'MINIMAL' },
+      { label: 'COMPLIANCE', value: 'OWASP' }
     ],
-    videoPlaceholderText: '🦷 SOLVING: TARGETS_RESOLVED'
-  },
-  {
-    id: 'collaboration-leadership',
-    name: 'Agile Teamwork',
-    tagline: 'Sprint delivery, review loops, and tech voice',
-    description: 'Leading code reviews, communicating technical concepts clearly, and collaborating with cross-functional teams to deliver sprints on time with premium quality.',
-    stats: [
-      { label: 'COMMUNICATION', value: '145dB' },
-      { label: 'SPRINT RATE', value: '100%' },
-      { label: 'PAIR_DEV', value: 'COOPERATIVE' }
-    ],
-    videoPlaceholderText: '🗣️ TEAMWORK: SHOCK_WAVE_DELIVERED'
+    videoPlaceholderText: '👤 CAMOUFLAGE: STEALTH_PROTOCOL'
   }
 ];
